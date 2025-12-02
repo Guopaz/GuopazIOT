@@ -6,8 +6,15 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		4CFEB36490F51C859F6F772F /* Pods_GuopazIOT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65C7EF97AA2986026C1FA554 /* Pods_GuopazIOT.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		65C7EF97AA2986026C1FA554 /* Pods_GuopazIOT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GuopazIOT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		667C2B05077D8B01147AF87F /* Pods-GuopazIOT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GuopazIOT.release.xcconfig"; path = "Target Support Files/Pods-GuopazIOT/Pods-GuopazIOT.release.xcconfig"; sourceTree = "<group>"; };
 		7D4FD80B2EDE86B400F1D706 /* GuopazIOT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuopazIOT.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		922F01A8C5E91DD9339A7709 /* Pods-GuopazIOT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GuopazIOT.debug.xcconfig"; path = "Target Support Files/Pods-GuopazIOT/Pods-GuopazIOT.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -23,17 +30,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CFEB36490F51C859F6F772F /* Pods_GuopazIOT.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		272785521EF33C581E8621DE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				65C7EF97AA2986026C1FA554 /* Pods_GuopazIOT.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7CF7DDA199CF11E359F3E8C0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				922F01A8C5E91DD9339A7709 /* Pods-GuopazIOT.debug.xcconfig */,
+				667C2B05077D8B01147AF87F /* Pods-GuopazIOT.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		7D4FD8022EDE86B400F1D706 = {
 			isa = PBXGroup;
 			children = (
 				7D4FD80D2EDE86B400F1D706 /* GuopazIOT */,
 				7D4FD80C2EDE86B400F1D706 /* Products */,
+				7CF7DDA199CF11E359F3E8C0 /* Pods */,
+				272785521EF33C581E8621DE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -52,6 +79,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7D4FD8162EDE86B500F1D706 /* Build configuration list for PBXNativeTarget "GuopazIOT" */;
 			buildPhases = (
+				FC3C678CD0887F5B4B62D69F /* [CP] Check Pods Manifest.lock */,
 				7D4FD8072EDE86B400F1D706 /* Sources */,
 				7D4FD8082EDE86B400F1D706 /* Frameworks */,
 				7D4FD8092EDE86B400F1D706 /* Resources */,
@@ -64,8 +92,6 @@
 				7D4FD80D2EDE86B400F1D706 /* GuopazIOT */,
 			);
 			name = GuopazIOT;
-			packageProductDependencies = (
-			);
 			productName = GuopazIOT;
 			productReference = 7D4FD80B2EDE86B400F1D706 /* GuopazIOT.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +139,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		FC3C678CD0887F5B4B62D69F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GuopazIOT-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7D4FD8072EDE86B400F1D706 /* Sources */ = {
@@ -248,6 +299,7 @@
 		};
 		7D4FD8172EDE86B500F1D706 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 922F01A8C5E91DD9339A7709 /* Pods-GuopazIOT.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -276,6 +328,7 @@
 		};
 		7D4FD8182EDE86B500F1D706 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 667C2B05077D8B01147AF87F /* Pods-GuopazIOT.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
