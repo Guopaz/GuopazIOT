@@ -20,6 +20,8 @@
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		7D4FD80D2EDE86B400F1D706 /* GuopazIOT */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+			);
 			path = GuopazIOT;
 			sourceTree = "<group>";
 		};

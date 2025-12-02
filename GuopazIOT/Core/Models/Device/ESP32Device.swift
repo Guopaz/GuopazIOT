@@ -53,7 +53,7 @@ struct ESP32Device: Identifiable, Codable, Equatable {
 
 /// 设备连接类型
 enum DeviceConnectionType: String, Codable, CaseIterable {
-    case mqtt = "MQTT"
+    case wifi = "Wifi"
     case bluetooth = "Bluetooth"
     case both = "Both"  // 同时支持两种方式
 }

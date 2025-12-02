@@ -130,7 +130,7 @@ struct DeviceRowView: View {
     /// 根据连接类型返回图标
     private func deviceIcon(for type: DeviceConnectionType) -> String {
         switch type {
-        case .mqtt:
+        case .wifi:
             return "wifi"
         case .bluetooth:
             return "antenna.radiowaves.left.and.right"
@@ -160,7 +160,7 @@ struct AddDeviceView: View {
     @ObservedObject var viewModel: DeviceListViewModel
     
     @State private var deviceName = ""
-    @State private var connectionType: DeviceConnectionType = .mqtt
+    @State private var connectionType: DeviceConnectionType = .wifi
     
     var body: some View {
         NavigationView {

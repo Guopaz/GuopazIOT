@@ -230,7 +230,7 @@ struct MessageRowView: View {
     NavigationView {
         DeviceControlView(device: ESP32Device(
             name: "ESP32设备",
-            connectionType: .mqtt,
+            connectionType: .wifi,
             status: .disconnected,
             mqttTopicPrefix: "esp32/device1",
             capabilities: [.ledControl, .sensorReading]

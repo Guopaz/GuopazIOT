@@ -166,12 +166,12 @@ class DeviceControlViewModel: ObservableObject {
     /// 连接设备
     func connect() async {
         switch device.connectionType {
-        case .mqtt:
+        case .wifi:
             await connectMQTT()
         case .bluetooth:
             connectBluetooth()
         case .both:
-            // 优先使用MQTT
+            // 优先使用Wifi（MQTT）
             await connectMQTT()
         }
     }
@@ -179,7 +179,7 @@ class DeviceControlViewModel: ObservableObject {
     /// 断开连接
     func disconnect() {
         switch device.connectionType {
-        case .mqtt:
+        case .wifi:
             mqttService.disconnect()
         case .bluetooth:
             bluetoothService.disconnect()
@@ -198,7 +198,7 @@ class DeviceControlViewModel: ObservableObject {
         }
         
         switch device.connectionType {
-        case .mqtt:
+        case .wifi:
             sendCommandViaMQTT(commandJSON, command: command)
         case .bluetooth:
             sendCommandViaBluetooth(commandJSON, command: command)
